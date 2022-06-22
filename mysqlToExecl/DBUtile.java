@@ -23,8 +23,8 @@ public class DBUtile {
     public static Connection getConn(){
         try {
             return DriverManager.getConnection(DB_URL,USER,PASS);
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
+        } catch (SQLException throwable) {
+            throwable.printStackTrace();
         }
         return null;
     }
@@ -32,19 +32,19 @@ public class DBUtile {
         if (connection != null){
             try {
                 connection.close();
-            } catch (SQLException throwables) {
-                throwables.printStackTrace();
+            } catch (SQLException throwable) {
+                throwable.printStackTrace();
             }
         }
     }
     public static void clossPs(PreparedStatement preparedStatement){
         try {
             preparedStatement.close();
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
+        } catch (SQLException throwable) {
+            throwable.printStackTrace();
         }
     }
-    public static void clossRs(ResultSet resultSet){
+    public static void classRs(ResultSet resultSet){
         try {
             resultSet.close();
         } catch (SQLException throwables) {
